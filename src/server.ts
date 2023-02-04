@@ -3,6 +3,8 @@ import {TypeOrmDataSource} from './config'
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+import router from './routes'
+
 const app:express.Application = express();
 
 TypeOrmDataSource
@@ -17,6 +19,7 @@ TypeOrmDataSource
 
 
 app.use(express.json())
+app.use(router)
 
 app.listen(process.env.PORT,()=>{
     console.log(`Server running on port ${process.env.PORT}`);  
