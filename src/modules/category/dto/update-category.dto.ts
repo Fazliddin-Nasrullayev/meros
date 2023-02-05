@@ -1,6 +1,6 @@
 
-class CreateCategoryDto{
+class UpdateCategoryDto{
     title:string;
 }
 
-export default CreateCategoryDto
+export default UpdateCategoryDto

@@ -7,7 +7,7 @@ export class CategoryRepository{
     constructor(private readonly categoryRepository:Repository<Category>){}
 
     async getAll(){
-    return this.categoryRepository.createQueryBuilder().getMany()
+    return this.categoryRepository.find()
     }
 
     async getById(id:string){
