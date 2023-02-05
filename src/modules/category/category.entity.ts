@@ -1,4 +1,5 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+// import { SubCategory } from './../subcategory/category.entity';
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
 
 @Entity('category')
 export class Category {
@@ -7,4 +8,7 @@ export class Category {
 
     @Column('text')
     title: string;
+
+    // @OneToMany(()=>SubCategory, subcategory => subcategory.category)
+    // subCategories: SubCategory[];
 }

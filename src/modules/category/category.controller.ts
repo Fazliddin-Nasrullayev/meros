@@ -3,7 +3,7 @@ import { CategoryService } from "./category.service";
 import { CreateCategoryDto, UpdateCategoryDto } from "./dto";
 
 export class CategoryController{
-    constructor(private categoryService: CategoryService){}
+    constructor(private readonly categoryService: CategoryService){}
     
     async getAll(req:Request,res:Response){
         const categories = await this.categoryService.getAll()
